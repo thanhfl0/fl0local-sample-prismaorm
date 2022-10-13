@@ -4,8 +4,10 @@
     "description": "Stripe Checkout is a prebuilt, hosted payment page optimized for conversion. Whether you offer one-time purchases or subscriptions, use Checkout to easily and securely accept payments online.",
     "category": "Payment",
     "iconFile": "icon.png",
-    "bannerFiles": [],
-    "configuration": [
+    "bannerFiles":
+    [],
+    "configuration":
+    [
         {
             "displayName": "Domain Name",
             "key": "domain_name",
@@ -31,7 +33,8 @@
             "type": "string"
         }
     ],
-    "endpoint": [
+    "endpoint":
+    [
         {
             "name": "Creat Checkout Session",
             "type": "post",
@@ -68,17 +71,19 @@
             "path": "/order"
         }
     ],
-    "database": [
+    "database":
+    [
         {
             "name": "Products",
-            "columns": [
+            "columns":
+            [
                 {
                     "name": "productId",
                     "datatype": "bigint",
                     "description": "Product id",
                     "pk": true,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "name",
@@ -86,7 +91,7 @@
                     "description": "Product Name",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "quantity",
@@ -94,7 +99,7 @@
                     "description": "quantity of the product",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "code",
@@ -102,7 +107,7 @@
                     "description": "Product unique identifier",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "price",
@@ -110,20 +115,21 @@
                     "description": "product price",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 }
             ]
         },
         {
             "name": "OrderItems",
-            "columns": [
+            "columns":
+            [
                 {
                     "name": "productId",
                     "datatype": "bigint",
                     "description": "Product id",
                     "pk": true,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "OrderId",
@@ -131,7 +137,7 @@
                     "description": "OrderId",
                     "pk": true,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "quantity",
@@ -139,7 +145,7 @@
                     "description": "quantity of the product",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "price",
@@ -147,20 +153,21 @@
                     "description": "product price",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 }
             ]
         },
         {
             "name": "Orders",
-            "columns": [
+            "columns":
+            [
                 {
                     "name": "OrderId",
                     "datatype": "bigint",
                     "description": "Order id",
                     "pk": true,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "dateCreated",
@@ -168,7 +175,7 @@
                     "description": "order creation date",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "paymentDate",
@@ -176,7 +183,7 @@
                     "description": "payment date",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "totalAmount",
@@ -184,7 +191,7 @@
                     "description": "order total amount",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "shippingAddress",
@@ -192,7 +199,7 @@
                     "description": "Customer shipping address",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "billingAddress",
@@ -200,7 +207,7 @@
                     "description": "Customer billing address",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 },
                 {
                     "name": "paymentRefId",
@@ -208,7 +215,7 @@
                     "description": "Stripe ref Id",
                     "pk": false,
                     "nullable": false,
-                    "defaultValue":""
+                    "defaultValue": ""
                 }
             ]
         }
