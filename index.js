@@ -8,6 +8,10 @@ const stripe = Stripe('sk_test_51JPjRpBP3b9a6Oaqla514WS2q0VMX1O1IHmOhJ2QavNSQ0tW
 
 app.use(express.json());
 
+app.get('/healthcheck', async (req, res) => {
+  res.json({});
+});
+
 // GET products
 app.get('/products', async (req, res) => {
   const products = await prisma.product.findMany({
