@@ -4,12 +4,14 @@ const Stripe = require('stripe');
 
 const prisma = new PrismaClient();
 const app = express();
-const stripe = Stripe('sk_test_51JPjRpBP3b9a6Oaqla514WS2q0VMX1O1IHmOhJ2QavNSQ0tWfVAwLf9UXgWi1XcFIToaY3d8VDqFzhUSBkW8CRZY00jhmNITT6');
+const stripe = Stripe(process.env.STRIPE_PUBLIC_KEY);
 
 app.use(express.json());
 
 app.get('/healthcheck', async (req, res) => {
-  res.json({});
+  res.json({
+    test_env: process.env.TEST_ENV || 'No Value'
+  });
 });
 
 // GET products
